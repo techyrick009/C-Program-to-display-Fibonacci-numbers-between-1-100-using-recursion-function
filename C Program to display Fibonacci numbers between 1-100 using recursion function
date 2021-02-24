@@ -1,0 +1,51 @@
+
+/*
+ *  Author: Techyrick.com
+ */
+
+#include<stdio.h> 
+//#include 
+
+void main() {
+
+
+int fibo_func(int);
+
+//clrscr();
+
+int i;
+int no;
+ 
+ 
+   printf("C program to print Fibonacci series between 1-100 using recursion : ");
+ 
+   for ( i = 0 ; i < 100 ; i++ )
+   {
+      if(fibo_func(i) > 100) {
+          break;
+      }
+      printf("%d  ", fibo_func(i));
+     
+   }
+ //	getch(); 
+
+}
+ 
+int fibo_func(int no)
+{
+   if ( no == 0 ) {
+      return 0;
+   }
+   else if ( no == 1 ) {
+      return 1;  
+   }
+   else {
+       //Recursion
+      return ( fibo_func(no - 1) + fibo_func(no - 2) );
+   }
+} 
+
+
+
+
+
